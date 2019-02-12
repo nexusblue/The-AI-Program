@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerPos : MonoBehaviour
 {
 
-    /*
+
     private GameMaster gm;
 
     // Use this for initialization
@@ -15,7 +15,7 @@ public class PlayerPos : MonoBehaviour
         transform.position = gm.lastCheckPointPos;
     }
 
-    */
+
 
     // Update is called once per frame
     void Update()

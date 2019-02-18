@@ -32,7 +32,7 @@ public class RespawnPoints : MonoBehaviour {
 		if (other.tag ==  "Damage" && health > 0 ){
 			health = health - damageAmount;
 			if (health <=0 ){
-				SceneManager.LoadScene("RestartLevel");
+				SceneManager.LoadScene("MainScene");
 				//transform.position = respawnPoints[0].position;
 				//transform.rotation = respawnPoints[0].rotation;
 			}

@@ -286,13 +286,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413876234634600}
-  m_LocalRotation: {x: 0.18327385, y: -0, z: -0, w: 0.9830619}
-  m_LocalPosition: {x: 0.040000916, y: 5.5099998, z: -7.91}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0.040000916, y: 3.59, z: -7.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4852602980928338}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 21.121, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!20 &20222583398822328
 Camera:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,6 @@ GameObject:
   - component: {fileID: 143309083925764518}
   - component: {fileID: 54572014796348654}
   - component: {fileID: 82020499329450540}
-  - component: {fileID: 132536085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5354,19 +5353,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 18.5
-  m_RunSpeed: 30
-  m_RunstepLenghten: 0.5
-  m_JumpSpeed: 33.5
+  m_WalkSpeed: 24
+  m_RunSpeed: 28
+  m_RunstepLenghten: 0.485
+  m_JumpSpeed: 30
   m_StickToGroundForce: 7.5
-  m_GravityMultiplier: 4.5
+  m_GravityMultiplier: 5
   m_MouseLook:
-    XSensitivity: 2.25
-    YSensitivity: 2.25
+    XSensitivity: 1.8
+    YSensitivity: 1.8
     clampVerticalRotation: 1
-    MinimumX: -90
-    MaximumX: 90
-    smooth: 0
+    MinimumX: -13
+    MaximumX: 26
+    smooth: 1
     smoothTime: 35
     lockCursor: 1
   m_UseFovKick: 0
@@ -5441,9 +5440,11 @@ MonoBehaviour:
   m_JumpBob:
     BobDuration: 0
     BobAmount: 0
-  m_StepInterval: 0
-  m_FootstepSounds: []
-  m_JumpSound: {fileID: 0}
+  m_StepInterval: 2
+  m_FootstepSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 0}
 --- !u!114 &114761222385359430
 MonoBehaviour:
@@ -5459,7 +5460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damageAmount: 5
-  ammo: 50
+  ammo: 0
 --- !u!114 &114987871089052932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5472,17 +5473,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2045799e3a941b3abf90343ecddb5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   range: 1000
   fireRate: 15
-  fpsCam: {fileID: 0}
+  fpsCam: {fileID: 20222583398822328}
   muzzleFlash: {fileID: 198268726931660398}
   impactForce: 30
   impactEffect: {fileID: 0}
   gunClip: {fileID: 8300000, guid: 9afd6cc7134a3428cb7606e918101f8f, type: 3}
   gunSource: {fileID: 82020499329450540}
   ammoStart: 0
-  reloadValue: 15
+  reloadValue: 20
   ammoText: {fileID: 0}
 --- !u!114 &132536093
 MonoBehaviour:
@@ -5626,26 +5627,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &132536085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705487841318598}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab850566f6b2c4e1096b0543e338bdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4852602980928338}
-  respawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  health: 5
-  damageAmount: 5
-  activated: 0

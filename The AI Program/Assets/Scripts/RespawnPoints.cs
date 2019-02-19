@@ -6,26 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class RespawnPoints : MonoBehaviour {
 
-	[SerializeField]private Transform player;
-	public Transform [] respawnPoints;
-	
-
-	public int health = 5;
-	public int damageAmount = 5; 
-
-	public bool activated  = false;
-	public static GameObject[] CheckPointList;
-
-	// Use this for initialization
-	void Start () {
-		CheckPointList = GameObject.FindGameObjectsWithTag("Checkpoint");
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    [SerializeField] private Transform player;
+    public Transform[] respawnPoints;
 
 
-	}
+    public int health = 5;
+    public int damageAmount = 5;
+
+    public bool activated = false;
+    public static GameObject[] CheckPointList;
+
+    // Use this for initialization
+    void Start() {
+        CheckPointList = GameObject.FindGameObjectsWithTag("Checkpoint");
+    }
+
+    // Update is called once per frame
+    void Update() {
+        quitGame();
+
+    }
+    void quitGame()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+            Debug.Log("Game was quit");
+        }
+    }
 
 	
 	void OnTriggerEnter(Collider other){
